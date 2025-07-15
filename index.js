@@ -12,7 +12,7 @@ const server = express();
 server.use(bodyParser.json());
 server.use(express.static(path.join(__dirname, "public")));
 server.set("view engine", "ejs");
-server.set("views", "view");
+server.set("views", path.join(__dirname, "view"));
 
 server.use(route);
 
