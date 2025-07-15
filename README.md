@@ -38,7 +38,7 @@ However, the backend acts like a RESTful API. For communication and data transfe
 ### To run this project, you will need a `.env` file with the following:
 
 ```env
-PORT=
+PORT=I have kept the .env file on my github because i need it to deploy this project. soon i will disable the links
 MONGODB_URI=
 OPENCAGE_KEY=
 ```
