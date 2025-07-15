@@ -1,21 +1,44 @@
-This website is a traffic monitor. It can be really help full, when we want analyse traffic across different countries. to make this website functional i need a backend support.
+# Website Traffic Monitor
 
-It will be a over kill to make seperate projects for frontend and backend. so I have everything in same project. However the backend acts like a rest full api. for commucation and data transfer i have used fetch api.
+This website is a traffic monitor. It can be really helpful when we want to analyze traffic across different countries.  
+To make this website functional, backend support is required.
 
-Since it is a frontend task. relavant files are :
-view/home.ejs(it's equivalent to index.js)
-public/style.css
-public/script.js
+It would be overkill to make separate projects for frontend and backend, so I have included everything in the same project.  
+However, the backend acts like a RESTful API. For communication and data transfer, I have used the Fetch API.
 
-according to task :
+### Since it is a frontend-focused task, the relevant files are:
 
-1. Background_Tasks_API : background task is experimental for now, so i have use setInterval in public/script.js line 153.
-2. Canvas_API : Chart is a canvas in view/home.ejs line 49.
-3. Geolocation_API : this api only gives x and y coordinates to get location from this information opencage api is used. but it would be stupid to hardcode api key on frontend so i have used backend. on frontend i have used geolocation_api in public/script.js line 91.
-4. Intersection_Observer_API : this website is just used to show data so it wasn't neccessay
-5. Network_Information_API : public/script.js line 106.
+- `views/home.ejs` (equivalent to `index.html`)
+- `public/style.css`
+- `public/script.js`
 
-to run this project you will need .env file.
+---
+
+### According to the task requirements:
+
+1. **Background Tasks API**  
+   The Background Tasks API is still experimental. So, I have used `setInterval` instead, in `public/script.js` on **line 153**.
+
+2. **Canvas API**  
+   The chart is rendered using a `<canvas>` element in `views/home.ejs` on **line 49**.
+
+3. **Geolocation API**  
+   The Geolocation API only provides X and Y coordinates (latitude and longitude).  
+   To get the actual location (city, country, etc.) from these coordinates, I have used the **OpenCage API** on the backend (to avoid hardcoding the API key in frontend code).  
+   On the frontend, Geolocation API is used in `public/script.js` on **line 91**.
+
+4. **Intersection Observer API**  
+   This website is just used to show data, so using the Intersection Observer API wasn’t necessary.
+
+5. **Network Information API**  
+   Implemented in `public/script.js` on **line 106**.
+
+---
+
+### To run this project, you will need a `.env` file with the following:
+
+```env
 PORT=
 MONGODB_URI=
 OPENCAGE_KEY=
+```
